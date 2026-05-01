@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的繪圖板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="paintCanvas" width="350" height="500"></canvas>
+
+<div class="controls">
+    <label>粗細：</label>
+    
+    <input type="range" id="sizeSlider" min="1" max="50" value="5">
+    <span id="sizeValue">5</span> 
+    
+    <input type="color" id="colorPicker">
+    
+    <button onclick="undo()">上一步 (Undo)</button>
+    <button onclick="redo()">下一步 (Redo)</button>
+    <button onclick="usePencil()">畫筆</button>
+    <button onclick="useEraser()">橡皮擦</button>
+    <button onclick="useFill()">填滿</button>
+    <button onclick="clearCanvas()">清除畫布</button>
+    <button onclick="downloadImage()">下載圖片</button>
+  
+    <label>背景：</label>
+    <select id="bgPicker" onchange="changeBackground()">
+    <option value="#ffffff">白色</option>
+    <option value="#eeeeee">淺灰色</option>
+    <option value="#ffefd5">米黃色</option>
+    <option value="#333333">深灰色</option>
+    </select>
+</div>
+
+    <!-- 引入 JS 檔案 -->
+    <script src="script.js"></script>
+</body>
+</html>
