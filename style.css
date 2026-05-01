@@ -1,0 +1,20 @@
+canvas { 
+    border: 2px solid #000; 
+    cursor: crosshair; 
+}
+.controls { 
+    margin-top: 10px; 
+}
+.canvas-container {
+    padding: 50px 20px; /* 上下留 50px，左右留 20px 的捲動空間 */
+    background-color: #f0f0f0; /* 給背景色，讓使用者知道哪裡不是畫布 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#paintCanvas {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 增加陰影讓畫布邊界更明顯 */
+    touch-action: none; /* 畫布內依然禁止捲動以防誤觸 */
+}
